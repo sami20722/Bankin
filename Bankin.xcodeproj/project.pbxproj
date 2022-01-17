@@ -24,6 +24,9 @@
 		6BFB800527958788007EA212 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB800427958788007EA212 /* HomeCell.swift */; };
 		6BFB800727958BE0007EA212 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB800627958BE0007EA212 /* UIImageView+Extensions.swift */; };
 		6BFB800A27958F4A007EA212 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB800927958F4A007EA212 /* UIView+Extensions.swift */; };
+		6BFB800D2795B769007EA212 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB800C2795B769007EA212 /* CoreDataManager.swift */; };
+		6BFB800F2795B7D7007EA212 /* CountryListCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB800E2795B7D7007EA212 /* CountryListCoreDataManager.swift */; };
+		6BFB80112795B95D007EA212 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB80102795B95D007EA212 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		6BFB800427958788007EA212 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		6BFB800627958BE0007EA212 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		6BFB800927958F4A007EA212 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		6BFB800C2795B769007EA212 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6BFB800E2795B7D7007EA212 /* CountryListCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListCoreDataManager.swift; sourceTree = "<group>"; };
+		6BFB80102795B95D007EA212 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				6BFB800827958C01007EA212 /* Extensions */,
+				6BFB800B2795B53E007EA212 /* CoreData */,
 				6BFB7FF527957955007EA212 /* Service */,
 				6BFB7FEE27957620007EA212 /* Model */,
 				6BFB7FE627957057007EA212 /* Coodinator */,
@@ -89,7 +96,6 @@
 				6BFB7FDB27956FE8007EA212 /* Assets.xcassets */,
 				6BFB7FDD27956FE8007EA212 /* LaunchScreen.storyboard */,
 				6BFB7FE027956FE8007EA212 /* Info.plist */,
-				6BFB7FD827956FE5007EA212 /* Bankin.xcdatamodeld */,
 			);
 			path = Bankin;
 			sourceTree = "<group>";
@@ -136,8 +142,19 @@
 			children = (
 				6BFB800627958BE0007EA212 /* UIImageView+Extensions.swift */,
 				6BFB800927958F4A007EA212 /* UIView+Extensions.swift */,
+				6BFB80102795B95D007EA212 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6BFB800B2795B53E007EA212 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6BFB7FD827956FE5007EA212 /* Bankin.xcdatamodeld */,
+				6BFB800C2795B769007EA212 /* CoreDataManager.swift */,
+				6BFB800E2795B7D7007EA212 /* CountryListCoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +230,9 @@
 			files = (
 				6BFB800A27958F4A007EA212 /* UIView+Extensions.swift in Sources */,
 				6BFB800727958BE0007EA212 /* UIImageView+Extensions.swift in Sources */,
+				6BFB800F2795B7D7007EA212 /* CountryListCoreDataManager.swift in Sources */,
 				6BFB7FEB279571AC007EA212 /* HomeViewController.swift in Sources */,
+				6BFB800D2795B769007EA212 /* CoreDataManager.swift in Sources */,
 				6BFB7FED27957235007EA212 /* HomeViewModel.swift in Sources */,
 				6BFB7FF727957963007EA212 /* Sevice.swift in Sources */,
 				6BFB7FD427956FE5007EA212 /* ViewController.swift in Sources */,
@@ -221,6 +240,7 @@
 				6BFB800227957FD4007EA212 /* ParenBanks.swift in Sources */,
 				6BFB7FD027956FE5007EA212 /* AppDelegate.swift in Sources */,
 				6BFB7FFE27957FD4007EA212 /* Banks.swift in Sources */,
+				6BFB80112795B95D007EA212 /* String+Extensions.swift in Sources */,
 				6BFB7FE827957069007EA212 /* AppCoordinator.swift in Sources */,
 				6BFB7FDA27956FE5007EA212 /* Bankin.xcdatamodeld in Sources */,
 				6BFB800527958788007EA212 /* HomeCell.swift in Sources */,

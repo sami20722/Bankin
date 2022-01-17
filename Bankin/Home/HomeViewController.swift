@@ -51,11 +51,11 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
-        return self.viewModel.countryListModel?.resources?[section].country_code
+        return self.viewModel.countryListModel?.resources?[section].countryCode
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.countryListModel?.resources?[section].parent_banks?.count ?? 0
+        return self.viewModel.countryListModel?.resources?[section].parentBanks?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -68,7 +68,7 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? HomeCell{
-            cell.bank = self.viewModel.countryListModel?.resources?[indexPath.section].parent_banks?[indexPath.row]
+            cell.bank = self.viewModel.countryListModel?.resources?[indexPath.section].parentBanks?[indexPath.row]
             return cell
         }
         

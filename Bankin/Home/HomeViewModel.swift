@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 class HomeViewModel {
     weak var coordinator : AppCoordinator!
     var apiClient: ServiceProtocol!
@@ -18,8 +19,16 @@ class HomeViewModel {
     
     func fechData(completion: @escaping (Bool) -> Void){
         apiClient.callApi { countryListModel in
+            guard let countryListModel = countryListModel else {return}
             self.countryListModel = countryListModel
             completion(true)
+            DispatchQueue.main.async {
+                self.saveData(countryListModel: countryListModel)
+            }
         }
+    }
+    
+    func saveData(countryListModel : CountryListModel){
+        BanksCoreDataManager.shared.createData(countryListModel: countryListModel)
     }
 }

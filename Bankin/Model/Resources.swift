@@ -13,19 +13,24 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 struct Resources : Codable {
-	let country_code : String?
-	let parent_banks : [ParenBanks]?
+	let countryCode : String?
+	let parentBanks : [ParenBanks]?
 
 	enum CodingKeys: String, CodingKey {
 
-		case country_code = "country_code"
-		case parent_banks = "parent_banks"
+		case countryCode = "country_code"
+		case parentBanks = "parent_banks"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		country_code = try values.decodeIfPresent(String.self, forKey: .country_code)
-		parent_banks = try values.decodeIfPresent([ParenBanks].self, forKey: .parent_banks)
+        countryCode = try values.decodeIfPresent(String.self, forKey: .countryCode)
+		parentBanks = try values.decodeIfPresent([ParenBanks].self, forKey: .parentBanks)
 	}
+    
+    init(countryCode : String,parentBanks : [ParenBanks]){
+        self.countryCode = countryCode
+        self.parentBanks = parentBanks
+    }
 
 }
